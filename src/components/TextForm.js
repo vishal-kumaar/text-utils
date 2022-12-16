@@ -6,27 +6,32 @@ function TextUtils(props) {
   let convertToUppercase = () => {
     let newText = text.toUpperCase();
     setText(newText)
+    props.showAlert("Converted to uppercase.", "success")
   }
-
+  
   let convertToLowercase = () => {
     let newText = text.toLowerCase();
     setText(newText)
+    props.showAlert("Converted to lowercase.", "success")
   }
-
+  
   let reverseText = () => {
     let newText = text.split("").reverse().join("");
     setText(newText);
+    props.showAlert("Text reversed.", "success")
   }
-
+  
   let copyText = () => {
     navigator.clipboard.writeText(text);
+    props.showAlert("Text copied to clipboard.", "success")
   }
-
+  
   let removeExtraSpace = () => {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
+    props.showAlert("Extra Space removed.", "success")
   }
-
+  
   let clearAll = () => {
     setText("");
   }
