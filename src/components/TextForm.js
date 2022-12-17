@@ -40,14 +40,7 @@ function TextUtils(props) {
     setText(event.target.value);
   }
 
-  let words = 0;
-  let arrOfWords = text.split(" ");
-  
-  for (let word of arrOfWords){
-    if (word !== ""){
-      words += 1;
-    }
-  }
+  let words = text.split(" ").filter((element) => {return element.length!==0}).length;
 
   return (
     <>
