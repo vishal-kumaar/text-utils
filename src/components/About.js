@@ -1,3 +1,5 @@
+import React from "react";
+
 function About(props) {
     let myStyle = {};
     if (props.mode === "light"){
