@@ -40,7 +40,7 @@ function TextUtils(props) {
     setText(event.target.value);
   }
 
-  let words = text.split(" ").filter((element) => {return element.length!==0}).length;
+  let words = text.split(/\s+/).filter((element) => {return element.length!==0}).length;
 
   return (
     <>
