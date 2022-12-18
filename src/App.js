@@ -32,7 +32,7 @@ function App() {
       document.title = "TextUtils - Light Mode";
     }
   }
-
+  
   return (
     <Router>
       <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/>
